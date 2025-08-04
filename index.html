@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>30 Hari Tanpa PMO Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Tantangan 30 Hari Tanpa PMO</h1>
+        <p>
+          Jadwal harian untuk membangun kebiasaan positif dan memperkuat diri.
+        </p>
+      </header>
+
+      <div class="stats-container">
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar"></div>
+          <span id="progressText">0% Selesai</span>
+        </div>
+        <div class="points-container">
+          <span class="points-icon">🏆</span>
+          <span id="pointsDisplay">Poin: 0</span>
+        </div>
+      </div>
+
+      <div class="mission-container">
+        <div class="mission-header">
+          <span class="mission-icon">🎰</span>
+          <h4 class="mission-title">Gacha Misi Harian</h4>
+        </div>
+        <p class="mission-text" id="missionText">
+          Klik tombol untuk mendapatkan misimu hari ini!
+        </p>
+        <div class="mission-buttons">
+          <button id="gachaButton">Gacha Misi!</button>
+          <button id="completeMissionButton" disabled>
+            Misi Selesai! (+1 Poin)
+          </button>
+        </div>
+      </div>
+
+      <main>
+        <ul class="schedule-list">
+          <h3 class="week-title">Minggu 1: Membangun Fondasi</h3>
+          <li>
+            <input type="checkbox" id="day-1" class="day-checkbox" /><label
+              for="day-1"
+              ><strong>Hari 1:</strong> Niatkan karena Allah, buang semua
+              pemicu, & mulai jurnal kemajuan.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-2" class="day-checkbox" /><label
+              for="day-2"
+              ><strong>Hari 2:</strong> Lakukan olahraga ringan seperti berjalan
+              kaki atau jogging.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-3" class="day-checkbox" /><label
+              for="day-3"
+              ><strong>Hari 3:</strong> Habiskan waktu bersama teman atau
+              keluarga.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-4" class="day-checkbox" /><label
+              for="day-4"
+              ><strong>Hari 4:</strong> Pelajari hobi baru yang tidak melibatkan
+              layar.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-5" class="day-checkbox" /><label
+              for="day-5"
+              ><strong>Hari 5:</strong> Lakukan zikir atau meditasi pernapasan
+              untuk menenangkan pikiran.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-6" class="day-checkbox" /><label
+              for="day-6"
+              ><strong>Hari 6:</strong> Tulis surat untuk diri sendiri di masa
+              depan.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-7" class="day-checkbox" /><label
+              for="day-7"
+              ><strong>Hari 7:</strong> Rayakan minggu pertama tanpa PMO!</label
+            >
+          </li>
+          <h3 class="week-title">Minggu 2: Menjaga Momentum</h3>
+          <li>
+            <input type="checkbox" id="day-8" class="day-checkbox" /><label
+              for="day-8"
+              ><strong>Hari 8:</strong> Baca buku yang sudah lama ingin
+              dibaca.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-9" class="day-checkbox" /><label
+              for="day-9"
+              ><strong>Hari 9:</strong> Coba resep masakan baru.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-10" class="day-checkbox" /><label
+              for="day-10"
+              ><strong>Hari 10:</strong> Dengarkan musik yang
+              menenangkan.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-11" class="day-checkbox" /><label
+              for="day-11"
+              ><strong>Hari 11:</strong> Lakukan peregangan atau yoga.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-12" class="day-checkbox" /><label
+              for="day-12"
+              ><strong>Hari 12:</strong> Tonton film atau serial TV yang
+              inspiratif.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-13" class="day-checkbox" /><label
+              for="day-13"
+              ><strong>Hari 13:</strong> Rencanakan liburan atau perjalanan
+              singkat.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-14" class="day-checkbox" /><label
+              for="day-14"
+              ><strong>Hari 14:</strong> Rayakan dua minggu tanpa PMO!</label
+            >
+          </li>
+          <h3 class="week-title">Minggu 3: Menguatkan Diri</h3>
+          <li>
+            <input type="checkbox" id="day-15" class="day-checkbox" /><label
+              for="day-15"
+              ><strong>Hari 15:</strong> Lakukan pekerjaan sukarela atau bantu
+              orang lain.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-16" class="day-checkbox" /><label
+              for="day-16"
+              ><strong>Hari 16:</strong> Pelajari keterampilan baru secara
+              online.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-17" class="day-checkbox" /><label
+              for="day-17"
+              ><strong>Hari 17:</strong> Tulis daftar hal yang disyukuri
+              (latihan Syukur kepada Allah).</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-18" class="day-checkbox" /><label
+              for="day-18"
+              ><strong>Hari 18:</strong> Habiskan waktu di alam terbuka.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-19" class="day-checkbox" /><label
+              for="day-19"
+              ><strong>Hari 19:</strong> Lakukan latihan kekuatan.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-20" class="day-checkbox" /><label
+              for="day-20"
+              ><strong>Hari 20:</strong> Coba teknik relaksasi seperti mandi air
+              hangat.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-21" class="day-checkbox" /><label
+              for="day-21"
+              ><strong>Hari 21:</strong> Rayakan tiga minggu tanpa PMO!</label
+            >
+          </li>
+          <h3 class="week-title">Minggu 4: Menuju Kemenangan</h3>
+          <li>
+            <input type="checkbox" id="day-22" class="day-checkbox" /><label
+              for="day-22"
+              ><strong>Hari 22:</strong> Buat daftar tujuan jangka pendek dan
+              panjang.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-23" class="day-checkbox" /><label
+              for="day-23"
+              ><strong>Hari 23:</strong> Lakukan sesuatu yang kreatif seperti
+              melukis atau menulis.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-24" class="day-checkbox" /><label
+              for="day-24"
+              ><strong>Hari 24:</strong> Hubungi teman lama.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-25" class="day-checkbox" /><label
+              for="day-25"
+              ><strong>Hari 25:</strong> Pelajari manfaat nofap & dengarkan 1
+              ceramah agama yang menguatkan.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-26" class="day-checkbox" /><label
+              for="day-26"
+              ><strong>Hari 26:</strong> Tonton video motivasi.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-27" class="day-checkbox" /><label
+              for="day-27"
+              ><strong>Hari 27:</strong> Lakukan detoks media sosial selama
+              sehari.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-28" class="day-checkbox" /><label
+              for="day-28"
+              ><strong>Hari 28:</strong> Rayakan empat minggu tanpa PMO!</label
+            >
+          </li>
+          <h3 class="week-title">Menyelesaikan Tantangan</h3>
+          <li>
+            <input type="checkbox" id="day-29" class="day-checkbox" /><label
+              for="day-29"
+              ><strong>Hari 29:</strong> Tulis tentang pengalaman selama 29 hari
+              terakhir.</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day-30" class="day-checkbox" /><label
+              for="day-30"
+              ><strong>Hari 30:</strong> Rayakan dengan bersedekah sebagai tanda
+              syukur & rencanakan langkah selanjutnya!</label
+            >
+          </li>
+        </ul>
+      </main>
+
+      <div class="reward-section">
+        <button id="claimRewardButton" disabled>
+          Gacha Self-Reward! (Butuh 20 Poin)
+        </button>
+        <p class="reward-info">
+          Selesaikan tugas harian & misi untuk mendapatkan poin!
+        </p>
+      </div>
+
+      <div class="date-changer-section">
+        <label for="date-override">Simulasi Tanggal:</label>
+        <input type="date" id="date-override" />
+      </div>
+
+      <div class="reset-section">
+        <button id="resetButton">Reset Semua Progres</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

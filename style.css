@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #64ffda;
+  --secondary-color: #e63946;
+  --background-color: #0a192f;
+  --container-bg: #112240;
+  --text-color: #ccd6f6;
+  --heading-color: #ffffff;
+  --completed-color: #8892b0;
+  --border-color: #233554;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--container-bg);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 700px;
+  transition: max-width 0.3s ease-in-out;
+}
+
+header {
+  text-align: center;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: var(--heading-color);
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+}
+
+.stats-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.progress-container {
+  flex-grow: 1;
+  width: 100%;
+  background-color: var(--border-color);
+  border-radius: 25px;
+  position: relative;
+  height: 30px;
+  margin-bottom: 0;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #49a18c, var(--primary-color));
+  border-radius: 25px;
+  transition: width 0.4s ease-in-out;
+}
+
+#progressText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font-weight: 600;
+}
+
+.points-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--border-color);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.points-icon {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+#pointsDisplay {
+  color: var(--heading-color);
+}
+
+.mission-container {
+  margin-top: 25px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  border-radius: 8px;
+  width: 95%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+.mission-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.mission-icon {
+  font-size: 1.5em;
+}
+
+.mission-title {
+  margin: 0;
+  font-size: 1.2em;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.mission-text {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.mission-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.mission-buttons button {
+  flex-grow: 1;
+  padding: 12px;
+  font-size: 1.1em;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#gachaButton {
+  color: #0a192f;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 10px rgba(100, 255, 218, 0.2);
+  margin-top: 0;
+}
+
+#gachaButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background-color: #8fffe8;
+}
+
+#gachaButton:active {
+  transform: translateY(0);
+}
+
+#gachaButton:disabled {
+  background-color: var(--border-color);
+  color: var(--completed-color);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+#completeMissionButton {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+#completeMissionButton:hover:not(:disabled) {
+  background-color: var(--primary-color);
+  color: #0a192f;
+}
+
+#completeMissionButton:disabled {
+  border-color: var(--border-color);
+  color: var(--completed-color);
+  background-color: transparent;
+  cursor: not-allowed;
+}
+
+.mission-text.rolling {
+  animation: shuffle 0.5s ease-in-out;
+}
+
+@keyframes shuffle {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.schedule-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.schedule-list li {
+  display: flex;
+  align-items: center;
+  padding: 15px 10px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s;
+}
+
+.schedule-list li:last-child {
+  border-bottom: none;
+}
+
+.schedule-list li:hover {
+  background-color: #1a2c4d;
+}
+
+.day-checkbox {
+  margin-right: 15px;
+  min-width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
+
+.day-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.schedule-list label {
+  font-size: 1.25em;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.day-checkbox:checked + label {
+  text-decoration: line-through;
+  color: var(--completed-color);
+}
+
+.schedule-list label.locked {
+  opacity: 0.4;
+  cursor: not-allowed;
+  text-decoration: none !important;
+}
+
+.schedule-list label.locked::after {
+  content: "🔒";
+  display: inline-block;
+  margin-left: 12px;
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+.week-title {
+  font-size: 1.6em;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--heading-color);
+  display: inline-block;
+}
+
+.reward-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#claimRewardButton {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #0a192f;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#claimRewardButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+}
+
+#claimRewardButton:disabled {
+  background-color: var(--border-color);
+  color: var(--completed-color);
+  cursor: not-allowed;
+}
+
+.reward-info {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: var(--completed-color);
+}
+
+.date-changer-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date-changer-section label {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+#date-override {
+  background-color: var(--border-color);
+  color: var(--text-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 8px;
+  font-family: "Poppins", sans-serif;
+}
+
+.reset-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+#resetButton {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--secondary-color);
+  background-color: transparent;
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#resetButton:hover {
+  background-color: var(--secondary-color);
+  color: var(--heading-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+  }
+  header h1 {
+    font-size: 3em;
+  }
+  .schedule-list label {
+    font-size: 1.3em;
+  }
+}
