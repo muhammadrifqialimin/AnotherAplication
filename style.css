@@ -398,3 +398,30 @@ header p {
     font-size: 1.3em;
   }
 }
+
+/* --- GAYA UNTUK PENGINGAT VIDEO JURNAL --- */
+
+.video-journal-tip {
+  text-align: center;
+  padding: 15px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  background-color: var(--background-color);
+  border: 1px dashed var(--primary-color);
+  border-radius: 8px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.video-journal-tip p {
+  margin: 0;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.video-journal-tip strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}

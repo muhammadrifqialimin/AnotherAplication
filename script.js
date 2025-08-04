@@ -17,8 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- KONSTANTA & DATA ---
   const totalDays = checkboxes.length;
   const REWARD_COST = 20;
-  const MAX_ROLLS = 3;
+  const MAX_ROLLS = 2;
   const missions = [
+    // --- Misi Cepat (1-2 Menit) ---
     "Lakukan 20 detik plank SEKARANG.",
     "Tutup mata & fokus pada napas selama 60 detik penuh.",
     "Rapikan 5 benda terdekat yang ada di sekitarmu saat ini.",
@@ -33,12 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
     "Perbaiki postur dudukmu agar tegak selama 10 menit ke depan.",
     "Hapus 3 foto tidak penting dari galeri HP-mu.",
     "Tulis satu kata yang paling menggambarkan perasaanmu saat ini.",
+
+    // --- Misi Sedang (5-10 Menit) ---
     "Balas satu email atau pesan yang selama ini kamu tunda.",
     "Rencanakan dan siapkan pakaian yang akan kamu kenakan besok.",
     "Unsubscribe dari 5 newsletter email yang tidak pernah kamu baca.",
     "Tonton satu video edukasi singkat (5-10 menit) di YouTube.",
     "Baca satu artikel berita atau blog sampai selesai.",
-    "Lakukan '7 minute workout' dari YouTube.",
     "Jalan kaki di luar ruangan selama 10 menit tanpa melihat HP.",
     "Tulis satu paragraf di jurnal tentang perasaanmu saat ini.",
     "Dengarkan satu lagu favoritmu dengan saksama, tanpa melakukan hal lain.",
@@ -50,22 +52,71 @@ document.addEventListener("DOMContentLoaded", () => {
     "Ikuti satu video meditasi terpandu selama 5 menit.",
     "Cari tahu arti dari satu kata yang tidak kamu ketahui.",
     "Lap bersih layar HP dan keyboard komputermu.",
+    "Atur ulang aplikasi di layar utama HP-mu.",
+    "Rencanakan jadwalmu untuk besok secara detail.",
+    "Tulis satu ulasan positif untuk bisnis lokal atau produk yang kamu suka.",
+    "Pelajari 3 keyboard shortcut baru untuk komputermu.",
+    "Cari dan simpan satu resep makanan sehat yang ingin kamu coba.",
+
+    // --- Misi Fisik (Menguras Keringat) ---
+    "Lakukan '7 minute workout' dari YouTube.",
+    "Lakukan 15 'squat jumps'.",
+    "Coba lakukan 5 'burpees' dengan teknik yang benar.",
+    "Lakukan 'high knees' (lari di tempat lutut tinggi) secepat mungkin selama 30 detik.",
+    "Lakukan 'push-up' semampunya dalam 1 menit.",
+    "Naik turun tangga selama 3 menit tanpa henti (jika memungkinkan).",
+    "Lakukan 'mountain climbers' selama 45 detik.",
+    "Coba 'shadow boxing' (tinju bayangan) dengan intensitas tinggi selama 1 menit penuh.",
+    "Lakukan 20 'lunges' (10 per kaki).",
+    "Tahan posisi plank selama 45 detik.",
+    "Ikuti satu video peregangan seluruh tubuh (full body stretch) 5-10 menit.",
+    "Lakukan lompat tali (atau lompat di tempat) selama 3 menit.",
+    "Jogging di tempat dengan intensitas sedang selama 5 menit.",
+
+    // --- Misi 'Apes' (Tidak Beruntung tapi Bermanfaat) ---
+    "Rapikan folder 'Downloads' di komputermu selama 10 menit.",
+    "Hapus 10 kontak tidak penting dari HP-mu.",
+    "Review pengeluaranmu selama 3 hari terakhir.",
+    "Matikan semua notifikasi media sosial selama 1 jam ke depan.",
+    "Keluarkan semua isi dompetmu dan bersihkan dari struk-struk lama.",
+    "Identifikasi satu kebiasaan buruk dan tulis satu cara spesifik untuk mengatasinya.",
+    "Bayar satu tagihan atau urus satu administrasi yang sudah lama tertunda.",
+    "Buat rencana kasar berisi 3 tugas penting yang harus diselesaikan minggu ini.",
+    "Hapus 15 screenshot lama dari galeri HP-mu.",
+    "Bersihkan sepasang sepatu yang paling sering kamu pakai.",
+    "Kosongkan 'Recycle Bin' atau 'Trash' di komputermu dan HP-mu.",
+    "Cuci semua piring kotor yang ada di wastafel sekarang juga.",
+    "Pisahkan cucian kotor berdasarkan warna.",
   ];
   const selfRewards = [
-    "Bikin secangkir teh/kopi spesial",
-    "Makan cemilan favoritmu saat istirahat",
+    // --- Reward Ringan ---
+    "Bikin secangkir teh/kopi spesial favoritmu",
     "Nonton 1 episode serial TV tanpa gangguan",
     "30 menit main game tanpa rasa bersalah",
-    "Baca 1 bab buku fiksi santai",
+    "Baca 1 bab buku fiksi untuk bersantai",
     "Dengarkan 1 album musik dari awal sampai akhir",
     "Mandi air hangat lebih lama dari biasanya",
-    "Tidur siang 20 menit",
+    "Tidur siang selama 20 menit",
     "Telepon seorang teman untuk ngobrol santai",
-    "Menonton video lucu di YouTube selama 15 menit",
-    "Memberi makan hewan peliharaan (jika ada)",
-    "Menyusun puzzle atau bermain sudoku",
-    "Mencoba filter baru di media sosial",
-    "Menulis atau menggambar bebas di buku catatan",
+
+    // --- Reward Sedang (Lebih Spesial & Tetap Hemat) ---
+    "Jajan street food favoritmu",
+    "Coba satu resep masakan atau kue baru yang simpel",
+    "Nonton film di rumah dengan suasana bioskop (matikan lampu, siapkan cemilan)",
+    "Beli satu item kecil pendukung hobimu (misal: stiker, alat tulis, senar gitar)",
+    "Kunjungi taman kota atau ruang terbuka hijau terdekat",
+    "Dedikasikan 1 jam penuh untuk 'me time' tanpa diganggu sama sekali",
+    "Lakukan perawatan diri sederhana di rumah (contoh: masker wajah)",
+    "Tata ulang playlist musikmu atau buat yang baru sesuai mood",
+    "Download atau pinjam satu e-book gratis",
+    "Cetak satu foto kenangan favoritmu dan pajang di kamar",
+    "Kunjungi perpustakaan atau toko buku untuk mencari inspirasi",
+    "Bersepeda atau jogging di rute yang berbeda dari biasanya",
+    "Tata ulang tata letak perabotan di kamarmu",
+    "Beli satu tanaman hias kecil untuk ditaruh di meja",
+    "Mulai proyek declutter satu area kecil (seperti laci meja atau rak buku)",
+    "Ikuti satu tutorial baru di YouTube yang berhubungan dengan hobimu",
+    "Buat scrapbook digital sederhana dari 10 foto favoritmu",
   ];
 
   // --- FUNGSI HELPER UNTUK TANGGAL ---
